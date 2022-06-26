@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      function Main() {
+
+        const array = []
+        let opcao, tamanho
+
+        function UserInput() {
+          tamanho = parseInt(prompt("Digite o tamanho do array: "))
+        }
+
+        function Inserir() {
+          UserInput()
+          for (let i = 0; i < tamanho; i++) {
+            array[i] = prompt("Digite os valores que deseja armazenar no array:")
+          }
+        }
+
+        function Pesquisa() {
+          let pesquisa = prompt("Digite o valor que deseja pesquisar no array: ")
+          for (let i = 0; i < array.length; i++) {
+            if (array[i] == array.includes(pesquisa)) {
+              alert("O valor " + pesquisa + " está no array")
+              break
+            }
+            else {
+              alert("O valor " + pesquisa + " não está no array")
+              break
+            }
+          }
+        }
+
+        Inserir()
+        Pesquisa()
+        
+
+      }
+
+      Main()
+  </script>
+</body>
+</html>
